@@ -13,7 +13,6 @@ try:
     input_field.send_keys('12345')
     input_field.clear()
     input_field.send_keys('54321')
-
     print("Задание выполнено успешно.")
 
 except Exception as e:

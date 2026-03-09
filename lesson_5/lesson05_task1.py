@@ -14,7 +14,6 @@ try:
     time.sleep(2)
     button = driver.find_element(By.CSS_SELECTOR, ".btn.btn-primary")
     button.click()
-
     print("Кнопка нажата успешно!")
 
 except Exception as e:

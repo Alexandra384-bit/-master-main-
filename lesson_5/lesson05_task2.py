@@ -12,7 +12,6 @@ def main():
 
     try:
         driver.get("http://uitestingplayground.com/dynamicid")
-
         button = driver.find_element(By.CSS_SELECTOR, '.btn.btn-primary')
         button.click()
 

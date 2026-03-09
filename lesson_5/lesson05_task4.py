@@ -19,10 +19,8 @@ try:
     password_input.send_keys("SuperSecretPassword!")
     login_button = driver.find_element(By.CLASS_NAME, "radius")
     login_button.click()
-
     wait = WebDriverWait(driver, 10)
     flash_message = wait.until(EC.visibility_of_element_located((By.ID, "flash")))
-
     text_from_flash = flash_message.text.strip()
     print(text_from_flash)
 
