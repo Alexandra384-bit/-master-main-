@@ -15,9 +15,11 @@ try:
     third_image = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.XPATH, "(//img)[4]"))
     )
+
     WebDriverWait(driver, 10).until(
         lambda _: third_image.is_displayed() and int(third_image.get_attribute('naturalWidth')) > 0
     )
+    
     third_image_src = third_image.get_attribute('src')
     print(third_image_src)
 finally:

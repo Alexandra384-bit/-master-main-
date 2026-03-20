@@ -14,10 +14,12 @@ try:
     driver.get('http://uitestingplayground.com/textinput')
     input_field = driver.find_element(By.TAG_NAME, 'input')
     input_field.send_keys('SkyPro')
+
     button = WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable((By.CLASS_NAME, 'btn-primary'))
     )
     button.click()
+    
     result_text = button.text
     print(result_text)
 finally:

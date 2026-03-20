@@ -14,11 +14,13 @@ driver = webdriver.Chrome(service=service, options=options)
 try:
     driver.get("http://uitestingplayground.com/ajax")
     blue_button = driver.find_element(By.ID, 'ajaxButton')
+
     blue_button.click()
     wait = WebDriverWait(driver, 100)
     green_block = wait.until(
         EC.visibility_of_element_located((By.CSS_SELECTOR, '.bg-success'))
     )
+    
     text_from_green_block = green_block.text.strip()
     print(text_from_green_block)
 finally:
